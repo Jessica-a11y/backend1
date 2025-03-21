@@ -1,6 +1,6 @@
 package se.yrgo.test;
 
-import java.util.Set;
+import java.util.*;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
