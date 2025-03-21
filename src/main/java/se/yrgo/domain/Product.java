@@ -27,7 +27,7 @@ public class Product {
     public Product() {}
 
     public String toString() {
-        return String.format("ID: %d%tName: %s%tBrand: %s%tPrice: %d", productId, productName, brand, price);
+        return String.format("ID: %d, Name: %s, Brand: %s, Price: %d", productId, productName, brand, price);
     }
 
     public int getId() {

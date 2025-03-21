@@ -13,7 +13,7 @@ public class Category {
    @Column(name = "NAME", length = 30)
    private String name;
    @OneToMany
-   @JoinColumn(name = "PRODUCT_FK")
+   @JoinColumn(name = "CATEGORY_FK")
    private List<Product> listOfProduct;
 
    public Category(String name) {
@@ -23,7 +23,7 @@ public class Category {
 
    public Category(){}
 
-   public void addProductsToList(Product p) {
+   public void addProductToList(Product p) {
       this.listOfProduct.add(p);
    }
 
