@@ -18,24 +18,26 @@ public class HibernateTest {
         Session session = sf.openSession();
         Transaction tx = session.beginTransaction();
 
-        /* Category hairCare = new Category("Hair Care");
-        Product p1 = new Product(1567, "Moisture Shampoo", "XL", 349);
-        Product p2 = new Product(1568, "Moisture Conditioner", "XL", 349);
-        Product p3 = new Product(1570, "Leave-in Conditioner", "XL", 169);
-        hairCare.addProductToList(p1);
-        hairCare.addProductToList(p2);
-        hairCare.addProductToList(p3);
+        // Run this code first to create tables and save data. Change to 'create'.
+        Category electronics = new Category("Electronics");
+        Product product1 = new Product(1567, "Smartphone", "Apple", 12800);
+        Product product2 = new Product(1568, "Wierless Headphones", "Sonos", 2299);
+        Product product3 = new Product(1570, "DSLR Camera", "Nikon", 5499);
+        electronics.addProductToList(product1);
+        electronics.addProductToList(product2);
+        electronics.addProductToList(product3);
 
-        session.save(hairCare);
-        session.save(p1);
-        session.save(p2);
-        session.save(p3); */
+        session.save(product1);
+        session.save(product2);
+        session.save(product3);
+        session.save(electronics);
 
-        Category myCategory = (Category)session.get(Category.class, 1);
-        List<Product> productList = myCategory.getProducts();
+        // Get products from a category. Change to 'update'.
+        /* Category aCategory = (Category)session.get(Category.class, 4);
+        List<Product> productList = aCategory.getProducts();
         for(Product p : productList) {
             System.out.println(p);
-        }
+        } */ 
         
         tx.commit();
         session.close();
